@@ -12,6 +12,7 @@
 - 자바스크립트는 2진수, 8진수, 16진수를 표현하기 위한 데이터 타입을 제공하지 않기 때문에 이들 값을 참조하면 모두 10진수로만 해석된다.
 
 ...
+
 var binary = 0b01000001; // 2진수
 var octal = 0o101; // 8진수
 var hex = 0x41; // 16진수
@@ -22,7 +23,9 @@ console.log(octal); //65
 console.log(hex); //65
 console.log(binary === octal); //true
 console.log(octal === hex); //true
+
 ...
+
 
 -정수로 표시된다 해도 사실은 실수다.
 
@@ -45,9 +48,11 @@ console.log(octal === hex); //true
 따라서 일반 문자열 내에서 줄바꿈 등의 공백을 표현하려면 백슬래시(\)로 시작하는 이스케이프 시퀀스를 사용해야 한다.
 
 ...
+
 var str = 'Hello
 world'
 //SyntaxError: Invalid or unexpected token
+
 ...
 
 ...
