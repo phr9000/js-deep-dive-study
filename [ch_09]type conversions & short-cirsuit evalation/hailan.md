@@ -121,3 +121,26 @@ if(0) console.log('3'); // 숫자 0은 falsy한 값이므로 이 조건은 거�
 if('str') console.log('4'); // 비어 있지 않은 문자열 ('str') 은 truthy한 값이므로 함입니다. 블록이 실행 됩니다.
 if(null) console.log('5'); // 'null'은 falsy한 값이므로 이 조건은 거짓입니다. 해당 코드 블록이 실행되지 않습니다.
 ```
+
+```jsx
+[예제 09-12]
+if(!false) console.log(false + 'is falsy value');
+if(!undefined) console.log(undefined + 'is falsy value');
+if(!null) console.log(null + 'is falsy value');
+if(!0)  console.log(0 + 'is falsy value');
+if(!NaN) console.log(NaN + 'is falsy value');
+if(!'') console.log('' + 'is falsy value');
+```
+
+```jsx
+[예제 09-13]
+// 전달받은 인수가 falsy 값이면 true, Truthy 값이면 false를 반환한다.
+function isFalsy(v) {
+  return !v;
+}
+
+// 전달받은 인수가 Truthy 값이면 true, Falsy 값이면 false를 반환한다.
+// 예제 좀 더 이해하고 넘어가기!
+```
+
+# 9.3 명시적 타입 변환
