@@ -85,3 +85,46 @@ bar(); //SyntaxError: Identifier 'x' has already been declared
 |------|---|------|---|
 |전역|코드의 가장 바깥 영역|전역 스코프|전역 변수|
 |지역|함수 몸체 내부|지역 스코프|지역 변수|
+
+## 13.2.2 지역과 지역 스코프
+- 지역이란 `함수 몸체 내부`를 말한다.
+- 지역 변수는 자신의 지역 스코프와 하위 지역 스코프에서 유효하다.
+
+```jsx
+var x = 'global x'; // ---- : 전역 스코프 ---- //
+var y = 'global y'; // ---- : 전역 스코프 ---- //
+
+function outer() { // ---- : 전역 스코프 ---- //
+    var z = 'outers local z'; // ---- : outer의 지역 스코프 ---- //
+    console.log(x); // global x 
+    console.log(y); // global y
+    console.log(z); // outers local z
+    function innner () { // ---- : outer의 지역 스코프 ---- //
+        var x = 'inners local x'; // ---- : inner의 지역 스코프 ---- //
+        console.log(x); // global x
+        console.log(y); // global y
+        console.log(z); // outers local z
+    }
+    innner();
+}
+
+outer();
+
+console.log(x); //global x
+console.log(z); //ReferenceError: z is not defined
+```
+
+# 13.4 함수 레벨 스코프
+> 지역은 코드 블록이 아닌 함수에 의해서만 지역 스코프가 생성된다. (= 함수레벨스코프)
+> 이런 var의 문제점을 해결하기 위해 ES6에서 const와 let이 도입됐다. 
+```jsx
+var x = '13';
+
+if(true) {
+ x = '15';  
+}
+
+console.log(x); //15
+
+```
+# 13.5 렉시컬 스코프

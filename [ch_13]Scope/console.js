@@ -1,4 +1,4 @@
-var var1 = 1; //코드의 가장 바깥 영역에서 선언한 변수
+// var var1 = 1; //코드의 가장 바깥 영역에서 선언한 변수
 
 // if (true) {
 //     var var2 = 2; //코드 블록 내에서 선언한 변수
@@ -45,3 +45,25 @@ var var1 = 1; //코드의 가장 바깥 영역에서 선언한 변수
 // }
 
 // bar(); 
+
+// var x = 'global x'; // ---- : 전역 스코프 ---- //
+// var y = 'global y'; // ---- : 전역 스코프 ---- //
+
+// function outer() { // ---- : 전역 스코프 ---- //
+//     var z = 'outers local z'; // ---- : outer의 지역 스코프 ---- //
+//     console.log(x); // global x 
+//     console.log(y); // global y
+//     console.log(z); // outers local z
+//     function innner () { // ---- : outer의 지역 스코프 ---- //
+//         var x = 'inners local x'; // ---- : inner의 지역 스코프 ---- //
+//         console.log(x); // global x
+//         console.log(y); // global y
+//         console.log(z); // outers local z
+//     }
+//     innner();
+// }
+
+// outer();
+
+// console.log(x); //global x
+// console.log(z); //ReferenceError: z is not defined
