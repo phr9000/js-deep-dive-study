@@ -24,7 +24,7 @@ console.log(y); //1
 
 ```jsx
 [예제 15-01]
-var i = 100;
+var x = 100;
 
 if(true) {
   var x = 10;
