@@ -3,7 +3,7 @@
 // if (true) {
 //     var var2 = 2; //코드 블록 내에서 선언한 변수
 //     if (true) {
-//         var var3 = 3; //중첩된 코드 블록 내에서 선언한 변수 
+//         var var3 = 3; //중첩된 코드 블록 내에서 선언한 변수
 //     }
 // }
 
@@ -24,11 +24,10 @@
 
 // function foo() {
 //     var x = 'local';
-//     console.log(x); 
+//     console.log(x);
 // }
 // foo();
 // console.log(x);
-
 
 // function foo() {
 //     var x = 1;
@@ -36,7 +35,7 @@
 //     console.log(x);
 // }
 
-// foo(); // 처음에 설정한 1에서 2로 변경되어 출력된다. 
+// foo(); // 처음에 설정한 1에서 2로 변경되어 출력된다.
 
 // function bar() {
 //     let x = 1;
@@ -44,14 +43,14 @@
 //     console.log(x); // SyntaxError: Identifier 'x' has already been declared
 // }
 
-// bar(); 
+// bar();
 
 // var x = 'global x'; // ---- : 전역 스코프 ---- //
 // var y = 'global y'; // ---- : 전역 스코프 ---- //
 
 // function outer() { // ---- : 전역 스코프 ---- //
 //     var z = 'outers local z'; // ---- : outer의 지역 스코프 ---- //
-//     console.log(x); // global x 
+//     console.log(x); // global x
 //     console.log(y); // global y
 //     console.log(z); // outers local z
 //     function innner () { // ---- : outer의 지역 스코프 ---- //
@@ -67,3 +66,13 @@
 
 // console.log(x); //global x
 // console.log(z); //ReferenceError: z is not defined
+
+function add(x, y) {
+  return x + y;
+}
+console.dir(add);
+
+var b = function add(x, y) {
+  return x + y;
+};
+console.dir(b);
