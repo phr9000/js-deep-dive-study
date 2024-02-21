@@ -11,10 +11,19 @@
 
 // console.log(x); //15
 
-var i = 100;
+// var i = 100;
 
-if (true) {
-  var x = 10;
-}
+// if (true) {
+//   var x = 10;
+// }
 
-console.log(x); // 10
+// console.log(x); // 10
+
+// let x = 1;
+// // var y = 1;
+
+// let x = 100;
+// var y;
+
+// console.log(x);
+// // console.log(y); //1
